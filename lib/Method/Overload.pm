@@ -105,9 +105,19 @@ Method::Overload - method overload definition
                 return $args->{shout}. '!!!';
             };
         };
+        install {
+            callback {
+                return 'ya';
+            }
+        };
     };
     
     1;
+
+    # in your script:
+    Mock->say();                # ya
+    Mock->say({twitt => 'ya'}); # ya...
+    Mock->say({shout => 'ya'}), # ya!!!
 
 =head1 DESCRIPTION
 
