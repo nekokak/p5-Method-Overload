@@ -1,8 +1,6 @@
 package Method::Overload;
 use strict;
 use warnings;
-use List::MoreUtils qw/all/;
-use Data::Dumper;
 
 our $VERSION = '0.01';
 
